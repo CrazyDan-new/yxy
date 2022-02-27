@@ -1,0 +1,2554 @@
+// Copyright (C) 2017  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+
+// 
+// Device: Altera EP4CE10F17C8 Package FBGA256
+// 
+
+//
+// This file contains Fast Corner delays for the design using part EP4CE10F17C8,
+// with speed grade M, core voltage 1.2VmV, and temperature 0 Celsius
+//
+
+// 
+// This SDF file should be used for ModelSim (Verilog) only
+// 
+
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "mixer")
+  (DATE "02/26/2022 21:00:35")
+  (VENDOR "Altera")
+  (PROGRAM "Quartus Prime")
+  (VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition")
+  (DIVIDER .)
+  (TIMESCALE 1 ps)
+
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE scl\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (595:595:595) (664:664:664))
+        (IOPATH i o (1565:1565:1565) (1570:1570:1570))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE audio_mclk\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (615:615:615) (660:660:660))
+        (IOPATH i o (1582:1582:1582) (1585:1585:1585))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE sda\~output)
+    (DELAY
+      (ABSOLUTE
+        (PORT i (583:583:583) (663:663:663))
+        (PORT oe (590:590:590) (656:656:656))
+        (IOPATH i o (1535:1535:1535) (1540:1540:1540))
+        (IOPATH oe o (1599:1599:1599) (1586:1586:1586))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE sys_clk\~input)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (318:318:318) (698:698:698))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_clkctrl")
+    (INSTANCE sys_clk\~inputclkctrl)
+    (DELAY
+      (ABSOLUTE
+        (PORT inclk[0] (108:108:108) (89:89:89))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Add0\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (133:133:133) (184:184:184))
+        (IOPATH datab combout (192:192:192) (181:181:181))
+        (IOPATH datab cout (227:227:227) (175:175:175))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_clk\~2)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (192:192:192) (235:235:235))
+        (PORT datab (106:106:106) (135:135:135))
+        (PORT datad (104:104:104) (127:127:127))
+        (IOPATH dataa combout (158:158:158) (157:157:157))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE sys_rst_n\~input)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (338:338:338) (718:718:718))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_clkctrl")
+    (INSTANCE sys_rst_n\~inputclkctrl)
+    (DELAY
+      (ABSOLUTE
+        (PORT inclk[0] (108:108:108) (89:89:89))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_clk\[0\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (755:755:755) (775:775:775))
+        (PORT asdata (269:269:269) (290:290:290))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD asdata (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Add0\~2)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (134:134:134) (187:187:187))
+        (IOPATH dataa combout (165:165:165) (173:173:173))
+        (IOPATH dataa cout (226:226:226) (171:171:171))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+        (IOPATH cin cout (34:34:34) (34:34:34))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_clk\[1\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (755:755:755) (775:775:775))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Add0\~4)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (135:135:135) (184:184:184))
+        (IOPATH datab combout (192:192:192) (177:177:177))
+        (IOPATH datab cout (227:227:227) (175:175:175))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+        (IOPATH cin cout (34:34:34) (34:34:34))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_clk\[2\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (755:755:755) (775:775:775))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Add0\~6)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (139:139:139) (193:193:193))
+        (IOPATH dataa combout (165:165:165) (173:173:173))
+        (IOPATH dataa cout (226:226:226) (171:171:171))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+        (IOPATH cin cout (34:34:34) (34:34:34))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Add0\~8)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (138:138:138) (192:192:192))
+        (IOPATH dataa combout (186:186:186) (175:175:175))
+        (IOPATH dataa cout (226:226:226) (171:171:171))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+        (IOPATH cin cout (34:34:34) (34:34:34))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_clk\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (118:118:118) (151:151:151))
+        (PORT datac (176:176:176) (210:210:210))
+        (PORT datad (92:92:92) (110:110:110))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_clk\[4\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (755:755:755) (775:775:775))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Add0\~10)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (135:135:135) (185:185:185))
+        (IOPATH datab combout (166:166:166) (176:176:176))
+        (IOPATH datab cout (227:227:227) (175:175:175))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+        (IOPATH cin cout (34:34:34) (34:34:34))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_clk\[5\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (755:755:755) (775:775:775))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Add0\~12)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (135:135:135) (185:185:185))
+        (IOPATH datab combout (192:192:192) (177:177:177))
+        (IOPATH datab cout (227:227:227) (175:175:175))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+        (IOPATH cin cout (34:34:34) (34:34:34))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_clk\[6\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (755:755:755) (775:775:775))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Add0\~14)
+    (DELAY
+      (ABSOLUTE
+        (PORT datad (121:121:121) (160:160:160))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_clk\[7\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (755:755:755) (775:775:775))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Equal0\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (135:135:135) (188:188:188))
+        (PORT datab (135:135:135) (185:185:185))
+        (PORT datac (121:121:121) (164:164:164))
+        (PORT datad (121:121:121) (159:159:159))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (120:120:120) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_clk\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (117:117:117) (151:151:151))
+        (PORT datac (176:176:176) (210:210:210))
+        (PORT datad (93:93:93) (111:111:111))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_clk\[3\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (755:755:755) (775:775:775))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Equal0\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (134:134:134) (187:187:187))
+        (PORT datab (138:138:138) (189:189:189))
+        (PORT datac (123:123:123) (166:166:166))
+        (PORT datad (124:124:124) (164:164:164))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (120:120:120) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|i2c_clk\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (644:644:644) (760:760:760))
+        (PORT datac (176:176:176) (210:210:210))
+        (PORT datad (104:104:104) (127:127:127))
+        (IOPATH datab combout (191:191:191) (181:181:181))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|i2c_clk)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (755:755:755) (775:775:775))
+        (PORT asdata (910:910:910) (1016:1016:1016))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD asdata (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_clkctrl")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|i2c_clk\~clkctrl)
+    (DELAY
+      (ABSOLUTE
+        (PORT inclk[0] (335:335:335) (363:363:363))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Add2\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT datac (149:149:149) (193:193:193))
+        (PORT datad (150:150:150) (191:191:191))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|always5\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (454:454:454) (539:539:539))
+        (PORT datab (164:164:164) (216:216:216))
+        (PORT datac (154:154:154) (202:202:202))
+        (PORT datad (98:98:98) (119:119:119))
+        (IOPATH dataa combout (158:158:158) (157:157:157))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_bit\[2\]\~3)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (162:162:162) (216:216:216))
+        (PORT datab (163:163:163) (215:215:215))
+        (PORT datac (155:155:155) (204:204:204))
+        (PORT datad (150:150:150) (192:192:192))
+        (IOPATH dataa combout (158:158:158) (173:173:173))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE sda\~input)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (288:288:288) (668:668:668))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Equal4\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (142:142:142) (190:190:190))
+        (PORT datad (234:234:234) (286:286:286))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|i2c_end)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT asdata (348:348:348) (379:379:379))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD asdata (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|reg_num\[0\]\~15)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (372:372:372) (452:452:452))
+        (IOPATH datab combout (196:196:196) (205:205:205))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|reg_num\[0\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (735:735:735))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|reg_num\[1\]\~5)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (178:178:178) (245:245:245))
+        (PORT datab (167:167:167) (229:229:229))
+        (IOPATH dataa combout (186:186:186) (180:180:180))
+        (IOPATH dataa cout (226:226:226) (171:171:171))
+        (IOPATH datab combout (190:190:190) (181:181:181))
+        (IOPATH datab cout (227:227:227) (175:175:175))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|reg_num\[1\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (735:735:735))
+        (PORT ena (672:672:672) (749:749:749))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|reg_num\[2\]\~7)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (167:167:167) (226:226:226))
+        (IOPATH datab combout (166:166:166) (176:176:176))
+        (IOPATH datab cout (227:227:227) (175:175:175))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+        (IOPATH cin cout (34:34:34) (34:34:34))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|reg_num\[2\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (735:735:735))
+        (PORT ena (672:672:672) (749:749:749))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|reg_num\[3\]\~9)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (169:169:169) (231:231:231))
+        (IOPATH datab combout (192:192:192) (177:177:177))
+        (IOPATH datab cout (227:227:227) (175:175:175))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+        (IOPATH cin cout (34:34:34) (34:34:34))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|reg_num\[3\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (735:735:735))
+        (PORT ena (672:672:672) (749:749:749))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux8\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (182:182:182) (249:249:249))
+        (PORT datab (179:179:179) (242:242:242))
+        (PORT datac (159:159:159) (215:215:215))
+        (PORT datad (160:160:160) (211:211:211))
+        (IOPATH dataa combout (158:158:158) (157:157:157))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (120:120:120) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|reg_num\[4\]\~11)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (167:167:167) (222:222:222))
+        (IOPATH dataa combout (165:165:165) (173:173:173))
+        (IOPATH dataa cout (226:226:226) (171:171:171))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+        (IOPATH cin cout (34:34:34) (34:34:34))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|reg_num\[4\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (735:735:735))
+        (PORT ena (672:672:672) (749:749:749))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|reg_num\[5\]\~13)
+    (DELAY
+      (ABSOLUTE
+        (PORT datad (191:191:191) (241:241:241))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|reg_num\[5\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (735:735:735))
+        (PORT ena (672:672:672) (749:749:749))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|always3\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (205:205:205) (264:264:264))
+        (PORT datad (192:192:192) (240:240:240))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Equal0\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (214:214:214) (269:269:269))
+        (PORT datab (137:137:137) (187:187:187))
+        (PORT datac (121:121:121) (164:164:164))
+        (PORT datad (123:123:123) (163:163:163))
+        (IOPATH dataa combout (159:159:159) (163:163:163))
+        (IOPATH datab combout (161:161:161) (167:167:167))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|LessThan0\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (144:144:144) (200:200:200))
+        (PORT datab (213:213:213) (270:270:270))
+        (PORT datac (98:98:98) (123:123:123))
+        (PORT datad (199:199:199) (242:242:242))
+        (IOPATH dataa combout (158:158:158) (157:157:157))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[0\]\~27)
+    (DELAY
+      (ABSOLUTE
+        (PORT datad (176:176:176) (204:204:204))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[0\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[1\]\~9)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (143:143:143) (193:193:193))
+        (PORT datab (134:134:134) (184:184:184))
+        (IOPATH dataa combout (186:186:186) (180:180:180))
+        (IOPATH dataa cout (226:226:226) (171:171:171))
+        (IOPATH datab combout (190:190:190) (181:181:181))
+        (IOPATH datab cout (227:227:227) (175:175:175))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[1\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (PORT ena (421:421:421) (441:441:441))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[2\]\~11)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (135:135:135) (184:184:184))
+        (IOPATH datab combout (166:166:166) (176:176:176))
+        (IOPATH datab cout (227:227:227) (175:175:175))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+        (IOPATH cin cout (34:34:34) (34:34:34))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[2\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (PORT ena (421:421:421) (441:441:441))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[3\]\~13)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (141:141:141) (196:196:196))
+        (IOPATH dataa combout (186:186:186) (175:175:175))
+        (IOPATH dataa cout (226:226:226) (171:171:171))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+        (IOPATH cin cout (34:34:34) (34:34:34))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[3\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (PORT ena (421:421:421) (441:441:441))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[4\]\~15)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (147:147:147) (198:198:198))
+        (IOPATH dataa combout (165:165:165) (173:173:173))
+        (IOPATH dataa cout (226:226:226) (171:171:171))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+        (IOPATH cin cout (34:34:34) (34:34:34))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[4\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (PORT ena (421:421:421) (441:441:441))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[5\]\~17)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (135:135:135) (186:186:186))
+        (IOPATH datab combout (192:192:192) (177:177:177))
+        (IOPATH datab cout (227:227:227) (175:175:175))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+        (IOPATH cin cout (34:34:34) (34:34:34))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[5\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (PORT ena (421:421:421) (441:441:441))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[6\]\~19)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (142:142:142) (191:191:191))
+        (IOPATH datab combout (166:166:166) (176:176:176))
+        (IOPATH datab cout (227:227:227) (175:175:175))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+        (IOPATH cin cout (34:34:34) (34:34:34))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[6\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (PORT ena (421:421:421) (441:441:441))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[7\]\~21)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (135:135:135) (184:184:184))
+        (IOPATH datab combout (192:192:192) (177:177:177))
+        (IOPATH datab cout (227:227:227) (175:175:175))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+        (IOPATH cin cout (34:34:34) (34:34:34))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[7\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (PORT ena (421:421:421) (441:441:441))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[8\]\~23)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (135:135:135) (184:184:184))
+        (IOPATH datab combout (166:166:166) (176:176:176))
+        (IOPATH datab cout (227:227:227) (175:175:175))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+        (IOPATH cin cout (34:34:34) (34:34:34))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[8\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (PORT ena (421:421:421) (441:441:441))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[9\]\~25)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (149:149:149) (201:201:201))
+        (IOPATH dataa combout (188:188:188) (193:193:193))
+        (IOPATH cin combout (187:187:187) (204:204:204))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cnt_wait\[9\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (PORT ena (421:421:421) (441:441:441))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Equal0\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (144:144:144) (200:200:200))
+        (PORT datab (138:138:138) (188:188:188))
+        (PORT datac (202:202:202) (247:247:247))
+        (PORT datad (135:135:135) (175:175:175))
+        (IOPATH dataa combout (158:158:158) (157:157:157))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Equal0\~2)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (149:149:149) (202:202:202))
+        (PORT datab (137:137:137) (188:188:188))
+        (PORT datac (98:98:98) (123:123:123))
+        (PORT datad (90:90:90) (108:108:108))
+        (IOPATH dataa combout (159:159:159) (163:163:163))
+        (IOPATH datab combout (161:161:161) (167:167:167))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cfg_start\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (121:121:121) (155:155:155))
+        (PORT datab (228:228:228) (281:281:281))
+        (PORT datac (189:189:189) (223:223:223))
+        (PORT datad (162:162:162) (190:190:190))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cfg_start)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (735:735:735))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector3\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (189:189:189) (230:230:230))
+        (PORT datad (308:308:308) (366:366:366))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|state\.IDLE)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector4\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (555:555:555) (638:638:638))
+        (PORT datab (240:240:240) (300:300:300))
+        (PORT datad (298:298:298) (354:354:354))
+        (IOPATH dataa combout (158:158:158) (157:157:157))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|state\.START_1)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (735:735:735))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector5\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (614:614:614) (708:708:708))
+        (PORT datab (627:627:627) (722:722:722))
+        (PORT datad (135:135:135) (174:174:174))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (167:167:167) (167:167:167))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|state\.SEND_D_ADDR)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (735:735:735))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector6\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (611:611:611) (705:705:705))
+        (PORT datab (434:434:434) (501:501:501))
+        (PORT datad (135:135:135) (175:175:175))
+        (IOPATH dataa combout (158:158:158) (157:157:157))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|state\.ACK_1)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (735:735:735))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector9\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (614:614:614) (707:707:707))
+        (PORT datab (437:437:437) (504:504:504))
+        (PORT datad (402:402:402) (465:465:465))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (167:167:167) (167:167:167))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|state\.SEND_B_ADDR_L)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (735:735:735))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector10\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (148:148:148) (200:200:200))
+        (PORT datab (204:204:204) (242:242:242))
+        (PORT datac (199:199:199) (252:252:252))
+        (PORT datad (235:235:235) (288:288:288))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector10\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1158:1158:1158) (1339:1339:1339))
+        (PORT datab (103:103:103) (131:131:131))
+        (PORT datad (555:555:555) (628:628:628))
+        (IOPATH dataa combout (158:158:158) (157:157:157))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|state\.ACK_3)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (735:735:735))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector12\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (612:612:612) (706:706:706))
+        (PORT datab (435:435:435) (502:502:502))
+        (PORT datad (134:134:134) (174:174:174))
+        (IOPATH dataa combout (158:158:158) (157:157:157))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|state\.ACK_4)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (735:735:735))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|WideOr16\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (148:148:148) (201:201:201))
+        (PORT datac (127:127:127) (167:167:167))
+        (PORT datad (128:128:128) (165:165:165))
+        (IOPATH dataa combout (158:158:158) (157:157:157))
+        (IOPATH datac combout (120:120:120) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|ack)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1925:1925:1925) (2158:2158:2158))
+        (PORT datab (118:118:118) (148:148:148))
+        (PORT datac (102:102:102) (123:123:123))
+        (PORT datad (103:103:103) (120:120:120))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (120:120:120) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|always5\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (250:250:250) (311:311:311))
+        (PORT datac (673:673:673) (790:790:790))
+        (PORT datad (110:110:110) (129:129:129))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector11\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (613:613:613) (707:707:707))
+        (PORT datab (436:436:436) (504:504:504))
+        (PORT datad (200:200:200) (244:244:244))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (167:167:167) (167:167:167))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|state\.WR_DATA)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (735:735:735))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|always4\~9)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (149:149:149) (202:202:202))
+        (PORT datab (149:149:149) (200:200:200))
+        (PORT datac (199:199:199) (253:253:253))
+        (PORT datad (230:230:230) (282:282:282))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_bit\[2\]\~4)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (117:117:117) (153:153:153))
+        (PORT datab (705:705:705) (834:834:834))
+        (PORT datac (90:90:90) (112:112:112))
+        (PORT datad (182:182:182) (216:216:216))
+        (IOPATH dataa combout (158:158:158) (157:157:157))
+        (IOPATH datab combout (167:167:167) (156:156:156))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_bit\[2\]\~5)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (567:567:567) (652:652:652))
+        (PORT datab (188:188:188) (227:227:227))
+        (PORT datad (265:265:265) (303:303:303))
+        (IOPATH dataa combout (166:166:166) (163:163:163))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_bit\[2\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector18\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (310:310:310) (374:374:374))
+        (PORT datab (155:155:155) (202:202:202))
+        (PORT datac (357:357:357) (398:398:398))
+        (PORT datad (101:101:101) (122:122:122))
+        (IOPATH dataa combout (159:159:159) (163:163:163))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector18\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (178:178:178) (216:216:216))
+        (PORT datab (387:387:387) (442:442:442))
+        (PORT datad (327:327:327) (384:384:384))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (167:167:167) (158:158:158))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|state\.STOP)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|always10\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (314:314:314) (374:374:374))
+        (PORT datab (207:207:207) (247:247:247))
+        (PORT datac (154:154:154) (202:202:202))
+        (PORT datad (98:98:98) (119:119:119))
+        (IOPATH dataa combout (158:158:158) (163:163:163))
+        (IOPATH datab combout (160:160:160) (167:167:167))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_i2c_clk_en\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (190:190:190) (230:230:230))
+        (PORT datad (308:308:308) (367:367:367))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_i2c_clk_en)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_i2c_clk\[0\]\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (468:468:468) (555:555:555))
+        (PORT datad (125:125:125) (164:164:164))
+        (IOPATH datab combout (192:192:192) (181:181:181))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_i2c_clk\[0\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT asdata (767:767:767) (853:853:853))
+        (PORT clrn (765:765:765) (735:735:735))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD asdata (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_i2c_clk\[1\]\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (786:786:786) (916:916:916))
+        (PORT datad (122:122:122) (161:161:161))
+        (IOPATH dataa combout (165:165:165) (173:173:173))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_i2c_clk\[1\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (589:589:589) (528:528:528))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Equal1\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (232:232:232) (289:289:289))
+        (PORT datad (440:440:440) (516:516:516))
+        (IOPATH dataa combout (166:166:166) (163:163:163))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_bit\[0\]\~7)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (115:115:115) (150:150:150))
+        (PORT datab (583:583:583) (672:672:672))
+        (PORT datad (185:185:185) (219:219:219))
+        (IOPATH dataa combout (159:159:159) (173:173:173))
+        (IOPATH datab combout (166:166:166) (158:158:158))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_bit\[0\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_bit\[2\]\~2)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (163:163:163) (216:216:216))
+        (PORT datab (143:143:143) (192:192:192))
+        (PORT datac (154:154:154) (202:202:202))
+        (PORT datad (211:211:211) (254:254:254))
+        (IOPATH dataa combout (158:158:158) (157:157:157))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_bit\[2\]\~8)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (117:117:117) (154:154:154))
+        (PORT datab (164:164:164) (215:215:215))
+        (PORT datac (778:778:778) (902:902:902))
+        (PORT datad (181:181:181) (216:216:216))
+        (IOPATH dataa combout (159:159:159) (163:163:163))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_bit\[1\]\~6)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (272:272:272) (311:311:311))
+        (PORT datab (230:230:230) (288:288:288))
+        (PORT datad (181:181:181) (215:215:215))
+        (IOPATH dataa combout (186:186:186) (175:175:175))
+        (IOPATH datab combout (166:166:166) (158:158:158))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|cnt_bit\[1\])
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux12\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (269:269:269) (347:347:347))
+        (PORT datab (277:277:277) (350:350:350))
+        (PORT datac (258:258:258) (329:329:329))
+        (PORT datad (255:255:255) (321:321:321))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (196:196:196) (205:205:205))
+        (IOPATH datac combout (120:120:120) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux13\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (278:278:278) (357:357:357))
+        (PORT datab (280:280:280) (353:353:353))
+        (PORT datac (268:268:268) (341:341:341))
+        (PORT datad (262:262:262) (329:329:329))
+        (IOPATH dataa combout (159:159:159) (173:173:173))
+        (IOPATH datab combout (169:169:169) (167:167:167))
+        (IOPATH datac combout (120:120:120) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Mux2\~5)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (103:103:103) (134:134:134))
+        (PORT datab (105:105:105) (134:134:134))
+        (PORT datac (479:479:479) (561:561:561))
+        (PORT datad (344:344:344) (412:412:412))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (120:120:120) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|always3\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (179:179:179) (247:247:247))
+        (PORT datab (172:172:172) (233:233:233))
+        (PORT datac (156:156:156) (213:213:213))
+        (PORT datad (161:161:161) (213:213:213))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (120:120:120) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cfg_done\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (121:121:121) (153:153:153))
+        (PORT datab (323:323:323) (380:380:380))
+        (PORT datad (160:160:160) (186:186:186))
+        (IOPATH dataa combout (158:158:158) (163:163:163))
+        (IOPATH datab combout (160:160:160) (167:167:167))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|cfg_done)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (781:781:781) (752:752:752))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (765:765:765) (736:736:736))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Mux2\~6)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (487:487:487) (581:581:581))
+        (PORT datab (104:104:104) (133:133:133))
+        (PORT datac (475:475:475) (564:564:564))
+        (PORT datad (481:481:481) (560:560:560))
+        (IOPATH dataa combout (166:166:166) (173:173:173))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (120:120:120) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux14\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (266:266:266) (343:343:343))
+        (PORT datab (277:277:277) (349:349:349))
+        (PORT datac (255:255:255) (325:325:325))
+        (PORT datad (252:252:252) (318:318:318))
+        (IOPATH dataa combout (158:158:158) (157:157:157))
+        (IOPATH datab combout (191:191:191) (188:188:188))
+        (IOPATH datac combout (120:120:120) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux15\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (265:265:265) (342:342:342))
+        (PORT datab (276:276:276) (349:349:349))
+        (PORT datac (254:254:254) (324:324:324))
+        (PORT datad (252:252:252) (317:317:317))
+        (IOPATH dataa combout (195:195:195) (193:193:193))
+        (IOPATH datab combout (196:196:196) (192:192:192))
+        (IOPATH datac combout (120:120:120) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Mux2\~3)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (328:328:328) (393:393:393))
+        (PORT datab (173:173:173) (210:210:210))
+        (PORT datac (482:482:482) (563:563:563))
+        (PORT datad (308:308:308) (358:358:358))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (166:166:166) (167:167:167))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Mux2\~4)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (326:326:326) (392:392:392))
+        (PORT datab (361:361:361) (429:429:429))
+        (PORT datac (492:492:492) (590:590:590))
+        (PORT datad (426:426:426) (496:496:496))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (166:166:166) (167:167:167))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux9\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (180:180:180) (247:247:247))
+        (PORT datab (177:177:177) (240:240:240))
+        (PORT datac (157:157:157) (214:214:214))
+        (PORT datad (155:155:155) (198:198:198))
+        (IOPATH dataa combout (165:165:165) (159:159:159))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux9\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (103:103:103) (132:132:132))
+        (PORT datac (463:463:463) (556:556:556))
+        (PORT datad (155:155:155) (205:205:205))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (120:120:120) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux8\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (179:179:179) (246:246:246))
+        (PORT datab (172:172:172) (232:232:232))
+        (PORT datac (156:156:156) (213:213:213))
+        (PORT datad (162:162:162) (214:214:214))
+        (IOPATH dataa combout (170:170:170) (165:165:165))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux8\~2)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (121:121:121) (154:154:154))
+        (PORT datab (102:102:102) (131:131:131))
+        (PORT datac (465:465:465) (558:558:558))
+        (PORT datad (155:155:155) (198:198:198))
+        (IOPATH dataa combout (165:165:165) (163:163:163))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (120:120:120) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Mux2\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (486:486:486) (581:581:581))
+        (PORT datab (498:498:498) (583:583:583))
+        (PORT datac (162:162:162) (195:195:195))
+        (PORT datad (171:171:171) (202:202:202))
+        (IOPATH dataa combout (172:172:172) (165:165:165))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux11\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (183:183:183) (250:250:250))
+        (PORT datab (175:175:175) (235:235:235))
+        (PORT datac (160:160:160) (216:216:216))
+        (PORT datad (165:165:165) (218:218:218))
+        (IOPATH dataa combout (158:158:158) (163:163:163))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux10\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (181:181:181) (248:248:248))
+        (PORT datab (174:174:174) (234:234:234))
+        (PORT datac (158:158:158) (214:214:214))
+        (PORT datad (164:164:164) (216:216:216))
+        (IOPATH dataa combout (170:170:170) (165:165:165))
+        (IOPATH datab combout (167:167:167) (174:174:174))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Mux2\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (108:108:108) (140:140:140))
+        (PORT datab (189:189:189) (227:227:227))
+        (PORT datac (471:471:471) (557:557:557))
+        (PORT datad (346:346:346) (414:414:414))
+        (IOPATH dataa combout (195:195:195) (203:203:203))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (120:120:120) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Mux2\~2)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (110:110:110) (144:144:144))
+        (PORT datab (177:177:177) (216:216:216))
+        (PORT datac (473:473:473) (562:562:562))
+        (PORT datad (92:92:92) (110:110:110))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (120:120:120) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector1\~9)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (103:103:103) (134:134:134))
+        (PORT datab (342:342:342) (408:408:408))
+        (PORT datac (308:308:308) (361:361:361))
+        (PORT datad (626:626:626) (730:730:730))
+        (IOPATH dataa combout (159:159:159) (163:163:163))
+        (IOPATH datab combout (160:160:160) (167:167:167))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector1\~7)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (568:568:568) (666:666:666))
+        (PORT datab (341:341:341) (407:407:407))
+        (PORT datac (618:618:618) (721:721:721))
+        (PORT datad (336:336:336) (398:398:398))
+        (IOPATH dataa combout (186:186:186) (179:179:179))
+        (IOPATH datab combout (167:167:167) (156:156:156))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux4\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (273:273:273) (351:351:351))
+        (PORT datab (279:279:279) (351:351:351))
+        (PORT datac (263:263:263) (334:334:334))
+        (PORT datad (258:258:258) (324:324:324))
+        (IOPATH dataa combout (195:195:195) (193:193:193))
+        (IOPATH datab combout (188:188:188) (177:177:177))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux4\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (457:457:457) (528:528:528))
+        (PORT datab (637:637:637) (749:749:749))
+        (PORT datac (492:492:492) (589:589:589))
+        (PORT datad (319:319:319) (372:372:372))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (120:120:120) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux5\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (279:279:279) (358:358:358))
+        (PORT datab (281:281:281) (354:354:354))
+        (PORT datac (269:269:269) (342:342:342))
+        (PORT datad (262:262:262) (330:330:330))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (167:167:167) (174:174:174))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux5\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (509:509:509) (604:604:604))
+        (PORT datac (291:291:291) (335:335:335))
+        (PORT datad (473:473:473) (561:561:561))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Mux1\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (350:350:350) (424:424:424))
+        (PORT datab (172:172:172) (210:210:210))
+        (PORT datac (166:166:166) (197:197:197))
+        (PORT datad (428:428:428) (498:498:498))
+        (IOPATH dataa combout (188:188:188) (179:179:179))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux6\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (275:275:275) (353:353:353))
+        (PORT datab (279:279:279) (352:352:352))
+        (PORT datac (265:265:265) (336:336:336))
+        (PORT datad (259:259:259) (326:326:326))
+        (IOPATH dataa combout (181:181:181) (193:193:193))
+        (IOPATH datab combout (192:192:192) (181:181:181))
+        (IOPATH datac combout (120:120:120) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux6\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (502:502:502) (597:597:597))
+        (PORT datab (325:325:325) (379:379:379))
+        (PORT datad (468:468:468) (555:555:555))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux7\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (277:277:277) (356:356:356))
+        (PORT datab (280:280:280) (353:353:353))
+        (PORT datac (267:267:267) (340:340:340))
+        (PORT datad (261:261:261) (328:328:328))
+        (IOPATH dataa combout (166:166:166) (173:173:173))
+        (IOPATH datab combout (196:196:196) (192:192:192))
+        (IOPATH datac combout (120:120:120) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux7\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (503:503:503) (597:597:597))
+        (PORT datab (482:482:482) (579:579:579))
+        (PORT datac (442:442:442) (504:504:504))
+        (PORT datad (511:511:511) (592:592:592))
+        (IOPATH dataa combout (170:170:170) (165:165:165))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Mux1\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (562:562:562) (659:659:659))
+        (PORT datab (105:105:105) (133:133:133))
+        (PORT datac (89:89:89) (111:111:111))
+        (PORT datad (90:90:90) (107:107:107))
+        (IOPATH dataa combout (188:188:188) (179:179:179))
+        (IOPATH datab combout (196:196:196) (192:192:192))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector1\~8)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (105:105:105) (136:136:136))
+        (PORT datab (630:630:630) (730:730:730))
+        (PORT datac (326:326:326) (385:385:385))
+        (PORT datad (667:667:667) (786:786:786))
+        (IOPATH dataa combout (159:159:159) (163:163:163))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux2\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (269:269:269) (346:346:346))
+        (PORT datab (278:278:278) (350:350:350))
+        (PORT datac (258:258:258) (328:328:328))
+        (PORT datad (254:254:254) (320:320:320))
+        (IOPATH dataa combout (165:165:165) (159:159:159))
+        (IOPATH datab combout (166:166:166) (158:158:158))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector1\~3)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (502:502:502) (597:597:597))
+        (PORT datac (442:442:442) (504:504:504))
+        (PORT datad (322:322:322) (375:375:375))
+        (IOPATH dataa combout (186:186:186) (175:175:175))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux3\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (270:270:270) (348:348:348))
+        (PORT datab (278:278:278) (351:351:351))
+        (PORT datac (259:259:259) (330:330:330))
+        (PORT datad (256:256:256) (322:322:322))
+        (IOPATH dataa combout (170:170:170) (165:165:165))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_reg_cfg_inst\|Mux1\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (181:181:181) (248:248:248))
+        (PORT datab (179:179:179) (241:241:241))
+        (PORT datac (205:205:205) (253:253:253))
+        (PORT datad (156:156:156) (199:199:199))
+        (IOPATH dataa combout (170:170:170) (165:165:165))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector1\~2)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (103:103:103) (134:134:134))
+        (PORT datab (189:189:189) (228:228:228))
+        (PORT datac (471:471:471) (558:558:558))
+        (PORT datad (256:256:256) (323:323:323))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (120:120:120) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector1\~4)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (353:353:353) (427:427:427))
+        (PORT datab (102:102:102) (130:130:130))
+        (PORT datac (325:325:325) (376:376:376))
+        (PORT datad (423:423:423) (492:492:492))
+        (IOPATH dataa combout (186:186:186) (175:175:175))
+        (IOPATH datab combout (167:167:167) (158:158:158))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector1\~5)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (347:347:347) (413:413:413))
+        (PORT datac (489:489:489) (586:586:586))
+        (PORT datad (666:666:666) (785:785:785))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector1\~1)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (1158:1158:1158) (1339:1339:1339))
+        (PORT datab (237:237:237) (296:296:296))
+        (PORT datac (298:298:298) (355:355:355))
+        (PORT datad (235:235:235) (287:287:287))
+        (IOPATH dataa combout (158:158:158) (157:157:157))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector21\~3)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (564:564:564) (661:661:661))
+        (PORT datac (328:328:328) (387:387:387))
+        (PORT datad (338:338:338) (400:400:400))
+        (IOPATH dataa combout (158:158:158) (157:157:157))
+        (IOPATH datac combout (120:120:120) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector1\~0)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (187:187:187) (223:223:223))
+        (PORT datab (248:248:248) (310:310:310))
+        (PORT datad (230:230:230) (281:281:281))
+        (IOPATH dataa combout (158:158:158) (157:157:157))
+        (IOPATH datab combout (161:161:161) (167:167:167))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector1\~6)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (104:104:104) (135:135:135))
+        (PORT datab (103:103:103) (132:132:132))
+        (PORT datac (172:172:172) (207:207:207))
+        (PORT datad (359:359:359) (401:401:401))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector1\~10)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (103:103:103) (134:134:134))
+        (PORT datab (102:102:102) (130:130:130))
+        (PORT datac (89:89:89) (110:110:110))
+        (PORT datad (91:91:91) (109:109:109))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector21\~2)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (231:231:231) (287:287:287))
+        (PORT datab (671:671:671) (790:790:790))
+        (PORT datac (311:311:311) (372:372:372))
+        (PORT datad (295:295:295) (343:343:343))
+        (IOPATH dataa combout (188:188:188) (179:179:179))
+        (IOPATH datab combout (188:188:188) (177:177:177))
+        (IOPATH datac combout (120:120:120) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector21\~4)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (532:532:532) (609:609:609))
+        (PORT datab (337:337:337) (400:400:400))
+        (PORT datac (257:257:257) (294:294:294))
+        (PORT datad (102:102:102) (119:119:119))
+        (IOPATH dataa combout (159:159:159) (163:163:163))
+        (IOPATH datab combout (169:169:169) (167:167:167))
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|wm8978_cfg_inst\|i2c_ctrl_inst\|Selector21\~5)
+    (DELAY
+      (ABSOLUTE
+        (PORT dataa (174:174:174) (211:211:211))
+        (PORT datab (145:145:145) (195:195:195))
+        (PORT datac (673:673:673) (790:790:790))
+        (PORT datad (234:234:234) (287:287:287))
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (119:119:119) (125:125:125))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_pll")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|clk_gen_inst\|altpll_component\|auto_generated\|pll1)
+    (DELAY
+      (ABSOLUTE
+        (PORT areset (616:616:616) (616:616:616))
+        (PORT inclk[0] (1111:1111:1111) (1111:1111:1111))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_clkctrl")
+    (INSTANCE FM_top_inst\|audio_loopback_inst\|clk_gen_inst\|altpll_component\|auto_generated\|wire_pll1_clk\[0\]\~clkctrl)
+    (DELAY
+      (ABSOLUTE
+        (PORT inclk[0] (1121:1121:1121) (1120:1120:1120))
+      )
+    )
+  )
+)

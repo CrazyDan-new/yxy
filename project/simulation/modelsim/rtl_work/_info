@@ -1,0 +1,378 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\FPGA_test\cos_48M\project\simulation\modelsim
+T_opt
+VNJe_lVU2oUW1fO<6H`XA90
+04 6 4 work tb_dds fast 0
+=1-a4c3f0bebd29-621a350e-254-26b8
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.1c;51
+vaudio_loopback
+IA>R`QHg^537n58VPhA:6O0
+VcOBQXck@_mADBjMIHCnc:1
+Z1 dD:\FPGA_test\cos_48M\project\simulation\modelsim
+w1645612013
+8D:/FPGA_test/cos_48M/rtl/audio/audio_loopback.v
+FD:/FPGA_test/cos_48M/rtl/audio/audio_loopback.v
+L0 20
+Z2 OL;L;10.1c;51
+r1
+31
+Z3 o-vlog01compat -work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+Z4 !s92 -vlog01compat -work work +incdir+D:/FPGA_test/cos_48M/rtl/audio -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 gIDgB^aRm=TNG[JSGHXoQ1
+!s85 0
+!s108 1645884685.265000
+!s107 D:/FPGA_test/cos_48M/rtl/audio/audio_loopback.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/cos_48M/rtl/audio|D:/FPGA_test/cos_48M/rtl/audio/audio_loopback.v|
+vaudio_rcv
+IGICbY2DdEM539Bn_Z;DPS1
+VB>V:DD;E_FIh3H9Jl>eQP2
+R1
+w1644987928
+8D:/FPGA_test/cos_48M/rtl/audio/audio_rcv.v
+FD:/FPGA_test/cos_48M/rtl/audio/audio_rcv.v
+L0 20
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 2YJMeb0Wi[ZAeYjMHYBV<0
+!s85 0
+!s108 1645884685.205000
+!s107 D:/FPGA_test/cos_48M/rtl/audio/audio_rcv.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/cos_48M/rtl/audio|D:/FPGA_test/cos_48M/rtl/audio/audio_rcv.v|
+vclk_gen
+IC1hXa^Vm5z`6M7X33hNZ]3
+VKnMB_jQF1JW^gL;NJzZ781
+R1
+w1645609713
+8D:/FPGA_test/cos_48M/project/ip_core/clk_gen.v
+FD:/FPGA_test/cos_48M/project/ip_core/clk_gen.v
+L0 39
+R2
+r1
+31
+R3
+!i10b 1
+!s100 `L3H:k4fDR3@[zDQIIgJR1
+!s85 0
+!s108 1645884685.852000
+!s107 D:/FPGA_test/cos_48M/project/ip_core/clk_gen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/cos_48M/project/ip_core|D:/FPGA_test/cos_48M/project/ip_core/clk_gen.v|
+!s92 -vlog01compat -work work +incdir+D:/FPGA_test/cos_48M/project/ip_core -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vclk_gen_altpll
+Iel8PS4idTV1OQ?J`2WmME1
+VfB_eBS9U0nYDV4D;Dd^Xe3
+R1
+w1645611296
+8D:/FPGA_test/cos_48M/project/db/clk_gen_altpll.v
+FD:/FPGA_test/cos_48M/project/db/clk_gen_altpll.v
+L0 30
+R2
+r1
+31
+R3
+Z5 !s92 -vlog01compat -work work +incdir+D:/FPGA_test/cos_48M/project/db -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 BJUM=9DGg^O2VLm5fX3@z3
+!s85 0
+!s108 1645884685.972000
+!s107 D:/FPGA_test/cos_48M/project/db/clk_gen_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/cos_48M/project/db|D:/FPGA_test/cos_48M/project/db/clk_gen_altpll.v|
+vdds_make
+IW;2DVCFkk1eG6@5Ib<Ken0
+Vhg@;=25DM6>PzSUhROezH0
+R1
+w1645604891
+8D:/FPGA_test/cos_48M/rtl/mixer/dds_make.v
+FD:/FPGA_test/cos_48M/rtl/mixer/dds_make.v
+L0 4
+R2
+r1
+31
+R3
+Z6 !s92 -vlog01compat -work work +incdir+D:/FPGA_test/cos_48M/rtl/mixer -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+!i10b 1
+!s100 39Ge`V`?GYW`P=le486KF3
+!s85 0
+!s108 1645884685.382000
+!s107 D:/FPGA_test/cos_48M/rtl/mixer/dds_make.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/cos_48M/rtl/mixer|D:/FPGA_test/cos_48M/rtl/mixer/dds_make.v|
+vfifo_48to8
+I42V@eoZAn2IoNl2DH>:X60
+VXzmI1aeh>=oo^oG4UUYBh0
+R1
+w1645880153
+8D:/FPGA_test/fifo_48to8/rtl/fifo.v
+FD:/FPGA_test/fifo_48to8/rtl/fifo.v
+L0 5
+R2
+r1
+31
+R3
+!i10b 1
+!s100 jF[Lel1UF`kf?2;:fMf;K1
+!s85 0
+!s108 1645884684.711000
+!s107 D:/FPGA_test/fifo_48to8/rtl/fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/fifo_48to8/rtl|D:/FPGA_test/fifo_48to8/rtl/fifo.v|
+!s92 -vlog01compat -work work +incdir+D:/FPGA_test/fifo_48to8/rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vFM_Mod
+IcG6c4CeGDJ2O7fV@?3icz1
+VNlm;>hWP9K>?m6E]d7<V82
+R1
+w1645612292
+8D:/FPGA_test/cos_48M/rtl/FM/FM_Mod.v
+FD:/FPGA_test/cos_48M/rtl/FM/FM_Mod.v
+L0 1
+R2
+r1
+31
+R3
+Z7 !s92 -vlog01compat -work work +incdir+D:/FPGA_test/cos_48M/rtl/FM -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+n@f@m_@mod
+!i10b 1
+!s100 mH?WI?@;KidRF?:HFnGTl1
+!s85 0
+!s108 1645884685.498000
+!s107 D:/FPGA_test/cos_48M/rtl/FM/FM_Mod.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/cos_48M/rtl/FM|D:/FPGA_test/cos_48M/rtl/FM/FM_Mod.v|
+vFM_mult
+Iam6S;4D7FijH_Ok4aA]WA1
+V42;EU?PZCJMk2imgRFbW;3
+R1
+w1645609282
+8D:/FPGA_test/cos_48M/project/ip_core/FM_mult/FM_mult.v
+FD:/FPGA_test/cos_48M/project/ip_core/FM_mult/FM_mult.v
+L0 39
+R2
+r1
+31
+R3
+n@f@m_mult
+!i10b 1
+!s100 z7dI@4oYE[QXHkMf=QF8n2
+!s85 0
+!s108 1645884685.794000
+!s107 D:/FPGA_test/cos_48M/project/ip_core/FM_mult/FM_mult.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/cos_48M/project/ip_core/FM_mult|D:/FPGA_test/cos_48M/project/ip_core/FM_mult/FM_mult.v|
+!s92 -vlog01compat -work work +incdir+D:/FPGA_test/cos_48M/project/ip_core/FM_mult -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vFM_top
+IX`IjI4f6:nz3BWV<4OmS13
+VGa9JNAj;E>jgD8ij4b;Je0
+R1
+w1645612054
+8D:/FPGA_test/cos_48M/rtl/FM/FM_top.v
+FD:/FPGA_test/cos_48M/rtl/FM/FM_top.v
+L0 1
+R2
+r1
+31
+R3
+n@f@m_top
+R7
+!i10b 1
+!s100 zTNhio^M_oTgN[OLfTme52
+!s85 0
+!s108 1645884685.439000
+!s107 D:/FPGA_test/cos_48M/rtl/FM/FM_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/cos_48M/rtl/FM|D:/FPGA_test/cos_48M/rtl/FM/FM_top.v|
+vi2c_ctrl
+I^iThQh6O9_VRgPGfELS:U3
+VDN31boM=d00Qii@cX=_Qm1
+R1
+Z8 w1642828635
+8D:/FPGA_test/cos_48M/rtl/audio/i2c_ctrl.v
+FD:/FPGA_test/cos_48M/rtl/audio/i2c_ctrl.v
+L0 20
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 U<<K`?^PKhIMde@hY@1m31
+!s85 0
+!s108 1645884685.142000
+!s107 D:/FPGA_test/cos_48M/rtl/audio/i2c_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/cos_48M/rtl/audio|D:/FPGA_test/cos_48M/rtl/audio/i2c_ctrl.v|
+vi2c_reg_cfg
+IVUE0_D^iC?J2dalOz?Hb_1
+VH1o`dbRniZ8Z<N077J>D@2
+R1
+w1644987840
+8D:/FPGA_test/cos_48M/rtl/audio/i2c_reg_cfg.v
+FD:/FPGA_test/cos_48M/rtl/audio/i2c_reg_cfg.v
+L0 20
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 kOLco6WP=@mGh>amXegnP2
+!s85 0
+!s108 1645884685.074000
+!s107 D:/FPGA_test/cos_48M/rtl/audio/i2c_reg_cfg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/cos_48M/rtl/audio|D:/FPGA_test/cos_48M/rtl/audio/i2c_reg_cfg.v|
+vmixer
+I<`?=542[48k?_ScD93B:k2
+V^z0gzdIg0@66F[P72NzGl3
+R1
+w1645880403
+8D:/FPGA_test/cos_48M/rtl/mixer/mixer.v
+FD:/FPGA_test/cos_48M/rtl/mixer/mixer.v
+L0 1
+R2
+r1
+31
+R3
+R6
+!i10b 1
+!s100 XjRTGg^1BU<Y5`Job0HG^0
+!s85 0
+!s108 1645884685.324000
+!s107 D:/FPGA_test/cos_48M/rtl/mixer/mixer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/cos_48M/rtl/mixer|D:/FPGA_test/cos_48M/rtl/mixer/mixer.v|
+vMULT1
+IzH4JLC4AX:XHXU<ZGNIM62
+VjiQ[L?NWRC8FZfhRd<n?Y3
+R1
+w1645605021
+8D:/FPGA_test/cos_48M/project/ip_core/MULT1/MULT1.v
+FD:/FPGA_test/cos_48M/project/ip_core/MULT1/MULT1.v
+L0 39
+R2
+r1
+31
+R3
+n@m@u@l@t1
+!i10b 1
+!s100 `GjgBegHlJZd]5Q8VH21D3
+!s85 0
+!s108 1645884685.674000
+!s107 D:/FPGA_test/cos_48M/project/ip_core/MULT1/MULT1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/cos_48M/project/ip_core/MULT1|D:/FPGA_test/cos_48M/project/ip_core/MULT1/MULT1.v|
+!s92 -vlog01compat -work work +incdir+D:/FPGA_test/cos_48M/project/ip_core/MULT1 -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vMULT2
+I0ClTScS9cL9Zak:ke<amk3
+VUQ[D=zdEcbN_Ifn[=^To:3
+R1
+w1645605277
+8D:/FPGA_test/cos_48M/project/ip_core/MULT2/MULT2.v
+FD:/FPGA_test/cos_48M/project/ip_core/MULT2/MULT2.v
+L0 39
+R2
+r1
+31
+R3
+n@m@u@l@t2
+!i10b 1
+!s100 ggg9=5T@A2[?8zRM0S:b42
+!s85 0
+!s108 1645884685.735000
+!s107 D:/FPGA_test/cos_48M/project/ip_core/MULT2/MULT2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/cos_48M/project/ip_core/MULT2|D:/FPGA_test/cos_48M/project/ip_core/MULT2/MULT2.v|
+!s92 -vlog01compat -work work +incdir+D:/FPGA_test/cos_48M/project/ip_core/MULT2 -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vpll
+IHaaSJbNOUAi:B[;i14HR@0
+V_XSVm9JT6dEoXJ=[=cVXa3
+R1
+w1645603724
+8D:/FPGA_test/cos_48M/project/ip_core/PLL/pll.v
+FD:/FPGA_test/cos_48M/project/ip_core/PLL/pll.v
+L0 39
+R2
+r1
+31
+R3
+!i10b 1
+!s100 DQ[]nTmkcf<Oc2XPfQ3EK1
+!s85 0
+!s108 1645884685.614000
+!s107 D:/FPGA_test/cos_48M/project/ip_core/PLL/pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/cos_48M/project/ip_core/PLL|D:/FPGA_test/cos_48M/project/ip_core/PLL/pll.v|
+!s92 -vlog01compat -work work +incdir+D:/FPGA_test/cos_48M/project/ip_core/PLL -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vpll_altpll
+I7>1LE31@4z;4ESiTg?>H?2
+V?DF8j=RJ_EcKZlDzF;fMW0
+R1
+w1645603737
+8D:/FPGA_test/cos_48M/project/db/pll_altpll.v
+FD:/FPGA_test/cos_48M/project/db/pll_altpll.v
+L0 30
+R2
+r1
+31
+R3
+R5
+!i10b 1
+!s100 <XHKm0[07g^FnG=d6^1JB1
+!s85 0
+!s108 1645884685.912000
+!s107 D:/FPGA_test/cos_48M/project/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/cos_48M/project/db|D:/FPGA_test/cos_48M/project/db/pll_altpll.v|
+vsin
+IgV5_cV2N<9I=efnHf9hh<0
+VRRbQNLWg5lFPnUkWILk373
+R1
+w1645601796
+8D:/FPGA_test/cos_48M/project/ip_core/ROM/sin.v
+FD:/FPGA_test/cos_48M/project/ip_core/ROM/sin.v
+L0 39
+R2
+r1
+31
+R3
+!i10b 1
+!s100 aWPEkBG@bjkhPG:W3NC8U3
+!s85 0
+!s108 1645884685.554000
+!s107 D:/FPGA_test/cos_48M/project/ip_core/ROM/sin.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/cos_48M/project/ip_core/ROM|D:/FPGA_test/cos_48M/project/ip_core/ROM/sin.v|
+!s92 -vlog01compat -work work +incdir+D:/FPGA_test/cos_48M/project/ip_core/ROM -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vtb_dds
+I9IYgLeeDCUakGU@AW0hjX1
+Vm:5V8MbCJgNUSeN2]I?ab3
+R1
+w1645608050
+8D:/FPGA_test/cos_48M/project/../rtl/tb_dds.v
+FD:/FPGA_test/cos_48M/project/../rtl/tb_dds.v
+L0 3
+R2
+r1
+31
+R3
+!i10b 1
+!s100 e[fabAKJ>Y9d;;n]EUDH10
+!s85 0
+!s108 1645884686.032000
+!s107 D:/FPGA_test/cos_48M/project/../rtl/tb_dds.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/cos_48M/project/../rtl|D:/FPGA_test/cos_48M/project/../rtl/tb_dds.v|
+!s92 -vlog01compat -work work +incdir+D:/FPGA_test/cos_48M/project/../rtl -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF
+vwm8978_cfg
+IHj_bGW2[kPNe?l`GL4cGE3
+Vj8K5h4mgA`AcjcI9cS3g@3
+R1
+R8
+8D:/FPGA_test/cos_48M/rtl/audio/wm8978_cfg.v
+FD:/FPGA_test/cos_48M/rtl/audio/wm8978_cfg.v
+L0 20
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 WkG^]l]kDcWOK@D>Maf8^3
+!s85 0
+!s108 1645884685.009000
+!s107 D:/FPGA_test/cos_48M/rtl/audio/wm8978_cfg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/FPGA_test/cos_48M/rtl/audio|D:/FPGA_test/cos_48M/rtl/audio/wm8978_cfg.v|

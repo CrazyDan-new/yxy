@@ -1,0 +1,113 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'FM_top:FM_top_inst|audio_loopback:audio_loopback_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|i2c_clk'
+Slack : -2.639
+TNS   : -61.352
+
+Type  : Slow 1200mV 85C Model Setup 'sys_clk'
+Slack : -1.341
+TNS   : -1.341
+
+Type  : Slow 1200mV 85C Model Hold 'FM_top:FM_top_inst|audio_loopback:audio_loopback_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|i2c_clk'
+Slack : 0.115
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'sys_clk'
+Slack : 0.492
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'FM_top:FM_top_inst|audio_loopback:audio_loopback_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|cnt_i2c_clk[0]'
+Slack : -3.433
+TNS   : -3.433
+
+Type  : Slow 1200mV 85C Model Removal 'FM_top:FM_top_inst|audio_loopback:audio_loopback_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|cnt_i2c_clk[0]'
+Slack : 2.561
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FM_top:FM_top_inst|audio_loopback:audio_loopback_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|i2c_clk'
+Slack : -1.487
+TNS   : -50.558
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FM_top:FM_top_inst|audio_loopback:audio_loopback_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|cnt_i2c_clk[0]'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sys_clk'
+Slack : 9.783
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'FM_top:FM_top_inst|audio_loopback:audio_loopback_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|i2c_clk'
+Slack : -2.411
+TNS   : -54.458
+
+Type  : Slow 1200mV 0C Model Setup 'sys_clk'
+Slack : -1.246
+TNS   : -1.246
+
+Type  : Slow 1200mV 0C Model Hold 'FM_top:FM_top_inst|audio_loopback:audio_loopback_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|i2c_clk'
+Slack : 0.068
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'sys_clk'
+Slack : 0.456
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'FM_top:FM_top_inst|audio_loopback:audio_loopback_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|cnt_i2c_clk[0]'
+Slack : -3.047
+TNS   : -3.047
+
+Type  : Slow 1200mV 0C Model Removal 'FM_top:FM_top_inst|audio_loopback:audio_loopback_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|cnt_i2c_clk[0]'
+Slack : 2.328
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FM_top:FM_top_inst|audio_loopback:audio_loopback_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|i2c_clk'
+Slack : -1.487
+TNS   : -50.558
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FM_top:FM_top_inst|audio_loopback:audio_loopback_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|cnt_i2c_clk[0]'
+Slack : 0.441
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sys_clk'
+Slack : 9.774
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'FM_top:FM_top_inst|audio_loopback:audio_loopback_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|i2c_clk'
+Slack : -0.551
+TNS   : -7.727
+
+Type  : Fast 1200mV 0C Model Setup 'sys_clk'
+Slack : -0.370
+TNS   : -0.370
+
+Type  : Fast 1200mV 0C Model Hold 'FM_top:FM_top_inst|audio_loopback:audio_loopback_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|i2c_clk'
+Slack : 0.035
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'sys_clk'
+Slack : 0.197
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'FM_top:FM_top_inst|audio_loopback:audio_loopback_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|cnt_i2c_clk[0]'
+Slack : -1.304
+TNS   : -1.304
+
+Type  : Fast 1200mV 0C Model Removal 'FM_top:FM_top_inst|audio_loopback:audio_loopback_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|cnt_i2c_clk[0]'
+Slack : 1.493
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FM_top:FM_top_inst|audio_loopback:audio_loopback_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|i2c_clk'
+Slack : -1.000
+TNS   : -34.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FM_top:FM_top_inst|audio_loopback:audio_loopback_inst|wm8978_cfg:wm8978_cfg_inst|i2c_ctrl:i2c_ctrl_inst|cnt_i2c_clk[0]'
+Slack : 0.420
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sys_clk'
+Slack : 9.435
+TNS   : 0.000
+
+------------------------------------------------------------
